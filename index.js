@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const sqlite3 = require('sqlite3').verbose();
 const cron=require('cron');
 // Initialize the bot with token from environment variable
-const token = "7257553550:AAGQZBIxTnM6p9vlQm7LzJF8TnAT_tLuS_s";
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 let checkInRate = 0.02;
   //process.env['CHECKIN_RATE'];
